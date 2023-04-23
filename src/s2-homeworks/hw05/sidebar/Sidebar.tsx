@@ -13,21 +13,25 @@ export const Sidebar: FC<PropsType> = ({open, handleClose}) => {
     const sidebarClass = s.sidebar
         + (open ? ' ' + s.open : '')
 
-    if(!open){
-        return null
-    }
+    // if(!open){
+    //     return null
+    // }
+
     return (
+
         <>
+
             {/*затемнение справа от открытого меню*/}
             {open && <div className={s.background} onClick={handleClose}/>}
 
             <aside className={sidebarClass}>
                 <button className={s.close} onClick={handleClose}>
-                    <img
-                        src={closeIcon}
-                        alt="close sidebar"
-                        id={'hw5-menu-close'}
-                    />
+                    {/*<img*/}
+                    {/*    src={closeIcon}*/}
+                    {/*    alt="close sidebar"*/}
+                    {/*    id={'hw5-menu-close'}*/}
+                    {/*/>*/}
+
                 </button>
 
                 <nav id={'hw5-menu'} className={s.nav}>
