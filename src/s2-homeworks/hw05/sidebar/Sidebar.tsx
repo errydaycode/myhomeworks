@@ -25,14 +25,14 @@ export const Sidebar: FC<PropsType> = ({open, handleClose}) => {
             {open && <div className={s.background} onClick={handleClose}/>}
 
             <aside className={sidebarClass}>
-                <button className={s.close} onClick={handleClose}>
-                    {/*<img*/}
-                    {/*    src={closeIcon}*/}
-                    {/*    alt="close sidebar"*/}
-                    {/*    id={'hw5-menu-close'}*/}
-                    {/*/>*/}
+                    <img
+                        src={closeIcon}
+                        className={s.close}
+                        alt="close sidebar"
+                        id={'hw5-menu-close'}
+                        onClick={handleClose}
+                    />
 
-                </button>
 
                 <nav id={'hw5-menu'} className={s.nav}>
                     <NavLink
