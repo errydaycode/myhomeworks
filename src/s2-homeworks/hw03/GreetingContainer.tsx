@@ -4,7 +4,6 @@ import { UserType } from './HW3'
 
 
 
-
 type GreetingContainerPropsType = {
     users: UserType[] // need to fix any
     addUserCallback: (newName: string) => void// need to fix any

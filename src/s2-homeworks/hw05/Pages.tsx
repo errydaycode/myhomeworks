@@ -30,6 +30,8 @@ function Pages() {
             </Routes>
         </div>
     )
+
+
 }
 
 export default Pages
