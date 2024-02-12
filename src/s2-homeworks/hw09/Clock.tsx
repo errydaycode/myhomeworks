@@ -40,19 +40,16 @@ function Clock() {
     }
 
 
-    const stringTimeOptions = {
-        hour: '2-digit',
-        minute: '2-digit'
-    };
+    const stringDate = new Intl.DateTimeFormat("ru").format(date)  // день.месяц.год (01.02.2022)
+    const stringTime = new Intl.DateTimeFormat("ru", {
+        hour: "numeric",
+        minute: "numeric",
+        second: "numeric"
+    }).format(date)
+    ;// часы24:минуты:секунды (01:02:03)/(23:02:03)/(24:00:00)/(00:00:01) // пишут студенты
+   // пишут студенты, варианты 01.02.0123/01.02.-123/01.02.12345 не рассматриваем
 
 
-    const stringDateOptions = {
-        day: '2-digit',
-        month: '2-digit',
-        year: 'numeric'
-    }
-    const stringTime = date.toLocaleTimeString([], stringTimeOptions as any);// часы24:минуты:секунды (01:02:03)/(23:02:03)/(24:00:00)/(00:00:01) // пишут студенты
-    const stringDate = date.toLocaleDateString([], stringDateOptions as any)  // день.месяц.год (01.02.2022) // пишут студенты, варианты 01.02.0123/01.02.-123/01.02.12345 не рассматриваем
 
     // день недели на английском, месяц на английском (https://learn.javascript.ru/intl#intl-datetimeformat)
     const options: {weekday: 'long'} = { weekday: 'long' };
