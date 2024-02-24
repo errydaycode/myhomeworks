@@ -10,6 +10,7 @@ type SuperButtonPropsType = DefaultButtonPropsType & {
 }
 
 const SuperButton: React.FC<SuperButtonPropsType> = (
+
     {
         xType,
         className,
@@ -30,8 +31,7 @@ const SuperButton: React.FC<SuperButtonPropsType> = (
         + (className? '' + className : '')
 
       // задачка на смешивание классов
-
-
+    debugger
     // const finalClassName = s.button
     //     + (
     //         disabled
@@ -45,6 +45,7 @@ const SuperButton: React.FC<SuperButtonPropsType> = (
     //     + (className? '' + className : '')
 
     return (
+
         <button
             disabled={disabled}
             className={finalClassName}
