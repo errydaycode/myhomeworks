@@ -31,7 +31,7 @@ const SuperButton: React.FC<SuperButtonPropsType> = (
         + (className? '' + className : '')
 
       // задачка на смешивание классов
-    debugger
+
     // const finalClassName = s.button
     //     + (
     //         disabled
